@@ -1,11 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Store } from 'redux';
 import App from './App';
 import registerServiceWorker from './lib/registerServiceWorker';
-import './resources/index.css';
+import { createReduxStore } from './store';
+
+const preLoadedState = {};
+const store: Store = createReduxStore(preLoadedState);
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root') as HTMLElement
 );
+
 registerServiceWorker();
