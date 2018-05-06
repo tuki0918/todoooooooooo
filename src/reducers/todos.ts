@@ -1,11 +1,16 @@
-import { Action, handleActions } from 'redux-actions';
+import { Action, ActionMeta, handleActions } from 'redux-actions';
 import {
-    addTodoAction
+    addTodoAction,
+    updateTodoAction
 } from '../actions/todos';
 
 export enum TodoStatusEnum {
-    pending = 'pending',
-    completed = 'completed'
+    pending,
+    completed
+}
+
+export interface ITodoId {
+    id: number;
 }
 
 export interface ITodo {
@@ -21,6 +26,14 @@ export const todos = handleActions<any, any>({
     [addTodoAction.toString()]: (state: TTodosState, action: Action<ITodo>) => ([
         ...state,
         action.payload
-    ])
+    ]),
+
+    [updateTodoAction.toString()]: (state: TTodosState, action: ActionMeta<ITodo, ITodoId>) => {
+        return [
+            ...state.slice(0, action.meta.id),
+            action.payload,
+            ...state.slice(action.meta.id + 1)
+        ];
+    },
 
 }, initialState);

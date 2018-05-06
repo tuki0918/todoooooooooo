@@ -5,6 +5,7 @@ import { IAppState } from '../reducer';
 import { ITodo, TodoStatusEnum } from "../reducers/todos";
 
 interface IProps {
+    // TODO: types
     addTodoAction: any
 }
 
