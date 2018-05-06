@@ -5,6 +5,7 @@ import { ITodo, TTodosState } from '../reducers/todos';
 import ClearTodoForm from './forms/clearTodoForm';
 import CreateTodoForm from './forms/createTodoForm';
 import RemoveTodoForm from './forms/removeTodoForm';
+import SaveTodoForm from './forms/saveTodoForm';
 import TodoItem from './todoItem';
 
 interface IProps {
@@ -32,6 +33,7 @@ export class TodoList extends React.Component<IProps, IState> {
                 <CreateTodoForm />
                 <RemoveTodoForm />
                 <ClearTodoForm />
+                <SaveTodoForm />
                 <ul>
                     {this.items()}
                 </ul>
