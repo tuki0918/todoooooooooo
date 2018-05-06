@@ -22,13 +22,14 @@ export class Form extends React.Component<IProps, IState> {
         };
     }
 
-    private onInputTextChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    private onInputTextChange = (e: React.ChangeEvent<any>): void => {
         this.setState({
             text: e.target.value
         });
     };
 
-    private submit = (): void => {
+    private submit = (e: React.FormEvent<any>): void => {
+        e.preventDefault();
 
         const { text } = this.state;
         if (!text.length) {
@@ -51,14 +52,15 @@ export class Form extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <input
-                    type="text"
-                    value={text}
-                    onChange={this.onInputTextChange}
-                />
-                <button onClick={this.submit}>
-                    Add
-                </button>
+                <form onSubmit={this.submit}>
+
+                    <input type="text" value={text} onChange={this.onInputTextChange} />
+
+                    <button type="submit" onClick={this.submit}>
+                        Add
+                    </button>
+
+                </form>
             </div>
         );
     }
