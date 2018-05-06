@@ -1,6 +1,7 @@
 import { Action, ActionMeta, handleActions } from 'redux-actions';
 import {
     addTodoAction,
+    removeTodoAction,
     updateTodoAction
 } from '../actions/todos';
 
@@ -34,6 +35,12 @@ export const todos = handleActions<any, any>({
             action.payload,
             ...state.slice(action.meta.id + 1)
         ];
+    },
+
+    [removeTodoAction.toString()]: (state: TTodosState, action: Action<any>) => {
+        return state.filter((todo: ITodo, idx: number) => {
+            return (todo.status !== TodoStatusEnum.completed);
+        })
     },
 
 }, initialState);

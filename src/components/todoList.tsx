@@ -2,7 +2,8 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { IAppState } from '../reducer';
 import { ITodo, TTodosState } from '../reducers/todos';
-import Form from './form';
+import CreateTodoForm from './forms/createTodoForm';
+import RemoveTodoForm from './forms/removeTodoForm';
 import TodoItem from './todoItem';
 
 interface IProps {
@@ -27,7 +28,8 @@ export class TodoList extends React.Component<IProps, IState> {
         return (
             <div>
                 <h1>TodoList</h1>
-                <Form />
+                <CreateTodoForm />
+                <RemoveTodoForm />
                 <ul>
                     {this.items()}
                 </ul>

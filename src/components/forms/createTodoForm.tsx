@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { addTodoAction } from '../actions/todos';
-import { IAppState } from '../reducer';
-import { ITodo, TodoStatusEnum } from "../reducers/todos";
+import { addTodoAction } from '../../actions/todos';
+import { IAppState } from '../../reducer';
+import { ITodo, TodoStatusEnum } from "../../reducers/todos";
 
 interface IProps {
     // TODO: types
@@ -13,7 +13,7 @@ interface IState {
     text: string;
 }
 
-export class Form extends React.Component<IProps, IState> {
+export class CreateTodoForm extends React.Component<IProps, IState> {
 
     constructor(props : IProps) {
         super(props);
@@ -30,7 +30,6 @@ export class Form extends React.Component<IProps, IState> {
 
     private submit = (e: React.FormEvent<any>): void => {
         e.preventDefault();
-
         const { text } = this.state;
         if (!text.length) {
             return;
@@ -56,7 +55,7 @@ export class Form extends React.Component<IProps, IState> {
 
                     <input type="text" value={text} onChange={this.onInputTextChange} />
 
-                    <button type="submit" onClick={this.submit}>
+                    <button onClick={this.submit}>
                         Add
                     </button>
 
@@ -74,4 +73,4 @@ export default connect(
     {
         addTodoAction
     }
-)(Form);
+)(CreateTodoForm);

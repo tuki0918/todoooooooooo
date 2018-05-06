@@ -1,7 +1,7 @@
 {
   "name": "todoooooooooo",
   "version": "0.1.0",
-  "homepage" : "http://tuki0918.github.io/todoooooooooo",
+  "homepage": "http://tuki0918.github.io/todoooooooooo",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -19,7 +19,7 @@
     "test": "react-scripts-ts test --env=jsdom",
     "test:coverage": "react-scripts-ts test --env=jsdom --coverage",
     "eject": "react-scripts-ts eject",
-    "deploy" : "react-scripts-ts build && gh-pages -d build"
+    "deploy": "react-scripts-ts build && gh-pages -d build"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
