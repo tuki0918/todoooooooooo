@@ -9,6 +9,7 @@ enum actionTypes {
     ADD_TODO = 'ADD_TODO',
     UPDATE_TODO = 'UPDATE_TODO',
     REMOVE_TODO = 'REMOVE_TODO',
+    CLEAR = 'CLEAR',
 }
 
 // --------------------------------------------------
@@ -34,4 +35,8 @@ export const updateTodoAction: TActionFunction = createAction<ITodo, ITodoId>(
 
 export const removeTodoAction: TActionFunction = createAction<{}, {}>(
     actionTypes.REMOVE_TODO, () => ({})
+);
+
+export const clearAction: TActionFunction = createAction<{}, {}>(
+    actionTypes.CLEAR, () => ({})
 );

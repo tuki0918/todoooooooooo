@@ -1,22 +1,22 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { removeTodoAction } from '../../actions/todos';
+import { clearAction } from '../../actions/todos';
 import { IAppState } from '../../reducer';
 
 interface IProps {
     // TODO: types
-    removeTodoAction: any
+    clearAction: any
 }
 
 interface IState {
     //
 }
 
-export class RemoveTodoForm extends React.Component<IProps, IState> {
+export class ClearTodoForm extends React.Component<IProps, IState> {
 
     private submit = (e: React.FormEvent<any>): void => {
         e.preventDefault();
-        this.props.removeTodoAction();
+        this.props.clearAction();
     };
 
     public render() {
@@ -24,7 +24,7 @@ export class RemoveTodoForm extends React.Component<IProps, IState> {
         return (
             <div>
                 <button onClick={this.submit}>
-                    remove completed task
+                    clear
                 </button>
             </div>
         );
@@ -37,6 +37,6 @@ export default connect(
         //
     }),
     {
-        removeTodoAction
+        clearAction
     }
-)(RemoveTodoForm);
+)(ClearTodoForm);

@@ -1,6 +1,7 @@
 import { Action, ActionMeta, handleActions } from 'redux-actions';
 import {
     addTodoAction,
+    clearAction,
     removeTodoAction,
     updateTodoAction
 } from '../actions/todos';
@@ -42,5 +43,7 @@ export const todos = handleActions<any, any>({
             return (todo.status !== TodoStatusEnum.completed);
         })
     },
+
+    [clearAction.toString()]: (state: TTodosState, action: Action<any>) => initialState,
 
 }, initialState);

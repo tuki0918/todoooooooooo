@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { IAppState } from '../reducer';
 import { ITodo, TTodosState } from '../reducers/todos';
+import ClearTodoForm from './forms/clearTodoForm';
 import CreateTodoForm from './forms/createTodoForm';
 import RemoveTodoForm from './forms/removeTodoForm';
 import TodoItem from './todoItem';
@@ -30,6 +31,7 @@ export class TodoList extends React.Component<IProps, IState> {
                 <h1>TodoList</h1>
                 <CreateTodoForm />
                 <RemoveTodoForm />
+                <ClearTodoForm />
                 <ul>
                     {this.items()}
                 </ul>
