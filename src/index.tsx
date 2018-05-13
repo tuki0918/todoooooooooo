@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
-import App from './App';
+import { App } from './App';
 import { STORE_LOCALFORAGE_KEY } from './constants';
 import registerServiceWorker from './lib/registerServiceWorker';
 import { createReduxStore } from './store';

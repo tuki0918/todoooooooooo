@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { addTodoAction } from '../../actions/todos';
-import { IAppState } from '../../reducer';
 import { ITodo, TodoStatusEnum } from "../../reducers/todos";
 
 interface IProps {
@@ -65,12 +62,3 @@ export class CreateTodoForm extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        //
-    }),
-    {
-        addTodoAction
-    }
-)(CreateTodoForm);

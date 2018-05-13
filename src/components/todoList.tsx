@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { IAppState } from '../reducer';
+import ClearTodoForm from '../container/forms/clearTodoForm';
+import CreateTodoForm from '../container/forms/createTodoForm';
+import RemoveTodoForm from '../container/forms/removeTodoForm';
+import SaveTodoForm from '../container/forms/saveTodoForm';
+import TodoItem from '../container/todoItem';
 import { ITodo, TTodosState } from '../reducers/todos';
-import ClearTodoForm from './forms/clearTodoForm';
-import CreateTodoForm from './forms/createTodoForm';
-import RemoveTodoForm from './forms/removeTodoForm';
-import SaveTodoForm from './forms/saveTodoForm';
-import TodoItem from './todoItem';
 
 interface IProps {
     todos: TTodosState
@@ -42,12 +40,3 @@ export class TodoList extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        todos: state.todos
-    }),
-    {
-        //
-    }
-)(TodoList);

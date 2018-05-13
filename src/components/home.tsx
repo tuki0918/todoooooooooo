@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { IAppState } from '../reducer';
-import TodoList from './todoList';
+import TodoList from '../container/todoList';
 
 interface IProps {
     //
@@ -22,12 +20,3 @@ export class Home extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        //
-    }),
-    {
-        //
-    }
-)(Home);

@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { updateTodoAction } from '../actions/todos';
-import { IAppState } from '../reducer';
 import { ITodo, ITodoId, TodoStatusEnum } from '../reducers/todos';
 
 interface IProps extends ITodoId, ITodo {
@@ -39,12 +36,3 @@ export class TodoItem extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        //
-    }),
-    {
-        updateTodoAction
-    }
-)(TodoItem);

@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { removeTodoAction } from '../../actions/todos';
-import { IAppState } from '../../reducer';
 
 interface IProps {
     // TODO: types
@@ -31,12 +28,3 @@ export class RemoveTodoForm extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        //
-    }),
-    {
-        removeTodoAction
-    }
-)(RemoveTodoForm);

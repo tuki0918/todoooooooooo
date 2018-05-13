@@ -1,8 +1,6 @@
 import * as localforage from 'localforage';
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { STORE_LOCALFORAGE_KEY } from '../../constants';
-import { IAppState } from '../../reducer';
 import { TTodosState } from '../../reducers/todos';
 
 interface IProps {
@@ -40,12 +38,3 @@ export class SaveTodoForm extends React.Component<IProps, IState> {
     }
 
 }
-
-export default connect(
-    (state: IAppState) => ({
-        todos: state.todos
-    }),
-    {
-        //
-    }
-)(SaveTodoForm);
