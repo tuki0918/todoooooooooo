@@ -1,0 +1,18 @@
+@font-face {
+    font-family: misaki;
+    src: url(fonts/misaki_gothic.ttf);
+}
+
+body {
+    font-size: 16px;
+    margin: 2em 10%;
+}
+
+.font-misaki {
+    font-family: misaki, Arial, sans-serif;
+    font-size: 1.4em;
+}
+
+li {
+    list-style: none;
+}
