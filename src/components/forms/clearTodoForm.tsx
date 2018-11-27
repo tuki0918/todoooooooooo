@@ -20,8 +20,8 @@ export class ClearTodoForm extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <button onClick={this.submit}>
-                    clear
+                <button className="btn is-success" onClick={this.submit}>
+                    Clear
                 </button>
             </div>
         );

@@ -28,7 +28,7 @@ export class TodoItem extends React.Component<IProps, IState> {
         const isCompleted = (status === TodoStatusEnum.completed);
 
         return (
-            <li onClick={this.onUpdateTodo}>
+            <li className="font-misaki" onClick={this.onUpdateTodo}>
                 [{isCompleted ? 'x' : '_'}]
                 #{id}: {text}
             </li>

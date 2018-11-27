@@ -50,11 +50,15 @@ export class CreateTodoForm extends React.Component<IProps, IState> {
             <div>
                 <form onSubmit={this.submit}>
 
-                    <input type="text" value={text} onChange={this.onInputTextChange} />
+                    <label>Task Title</label>
 
-                    <button onClick={this.submit}>
-                        Add
-                    </button>
+                    <div className="field is-inline">
+                        <input type="text" className="input font-misaki" value={text} onChange={this.onInputTextChange} />
+
+                        <button className="btn is-error" onClick={this.submit}>
+                            Add
+                        </button>
+                    </div>
 
                 </form>
             </div>

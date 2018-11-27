@@ -30,7 +30,7 @@ export class SaveTodoForm extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <button onClick={this.submit}>
+                <button className="btn is-primary" onClick={this.submit}>
                     Save
                 </button>
             </div>

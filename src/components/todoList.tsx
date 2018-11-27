@@ -1,8 +1,4 @@
 import * as React from 'react';
-import ClearTodoForm from '../container/forms/clearTodoForm';
-import CreateTodoForm from '../container/forms/createTodoForm';
-import RemoveTodoForm from '../container/forms/removeTodoForm';
-import SaveTodoForm from '../container/forms/saveTodoForm';
 import TodoItem from '../container/todoItem';
 import { ITodo, TTodosState } from '../reducers/todos';
 
@@ -27,11 +23,6 @@ export class TodoList extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <h1>TodoList</h1>
-                <CreateTodoForm />
-                <RemoveTodoForm />
-                <ClearTodoForm />
-                <SaveTodoForm />
                 <ul>
                     {this.items()}
                 </ul>
