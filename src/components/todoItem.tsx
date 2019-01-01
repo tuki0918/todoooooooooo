@@ -1,3 +1,4 @@
+import * as ClassNames from 'classnames';
 import * as React from 'react';
 import { ITodo, ITodoId, TodoStatusEnum } from '../reducers/todos';
 
@@ -24,13 +25,14 @@ export class TodoItem extends React.Component<IProps, IState> {
 
     public render() {
 
-        const { id, text, status } = this.props;
+        const { text, status } = this.props;
         const isCompleted = (status === TodoStatusEnum.completed);
+        const itemFlag = ClassNames('nes-icon', 'like', { 'is-empty': !isCompleted });
 
         return (
             <li className="font-misaki" onClick={this.onUpdateTodo}>
-                [{isCompleted ? 'x' : '_'}]
-                #{id}: {text}
+                <i className={itemFlag} />
+                {text}
             </li>
         );
     }
