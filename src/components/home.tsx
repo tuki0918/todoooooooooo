@@ -24,19 +24,19 @@ export class Home extends React.Component<IProps, IState> {
                     <p>Using React Framework.</p>
                 </header>
 
-                <section className="form container with-title">
+                <section className="form nes-container with-title">
                     <h2 className="title">Form</h2>
-                    <div className="field">
+                    <div className="nes-field">
                         <CreateTodoForm />
                     </div>
-                    <div className="field is-inline">
+                    <div className="nes-field is-inline">
                         <RemoveTodoForm />
                         <ClearTodoForm />
                         <SaveTodoForm />
                     </div>
                 </section>
 
-                <section className="container with-title">
+                <section className="nes-container with-title">
                     <h2 className="title">TodoList</h2>
                     <div className="field">
                         <TodoList />

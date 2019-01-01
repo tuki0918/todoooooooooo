@@ -52,10 +52,10 @@ export class CreateTodoForm extends React.Component<IProps, IState> {
 
                     <label>Task Title</label>
 
-                    <div className="field is-inline">
+                    <div className="nes-field is-inline">
                         <input type="text" className="input font-misaki" value={text} onChange={this.onInputTextChange} />
 
-                        <button className="btn is-error" onClick={this.submit}>
+                        <button className="nes-btn is-error" onClick={this.submit}>
                             Add
                         </button>
                     </div>

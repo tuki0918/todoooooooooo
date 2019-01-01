@@ -20,7 +20,7 @@ export class RemoveTodoForm extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <button className="btn is-warning" onClick={this.submit}>
+                <button className="nes-btn is-warning" onClick={this.submit}>
                     Remove Completed Tasks
                 </button>
             </div>
