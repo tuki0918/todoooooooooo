@@ -7,7 +7,7 @@
     "localforage": "^1.7.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-redux": "^5.0.7",
+    "react-redux": "^5.1.1",
     "react-scripts-ts": "2.15.1",
     "redux": "^4.0.0",
     "redux-actions": "^2.3.2",
